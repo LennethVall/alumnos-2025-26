@@ -335,12 +335,12 @@ public class Principal {
         System.out.print("¿Confirmar baja? (s/n): ");
         char confirm = Character.toUpperCase(Util.leerChar());
         if (confirm == 'S') {
-            for (Alumno a : aBorrar) {
-                alumnos.remove(a);
-            }
+            alumnos.removeAll(aBorrar);
+            
             System.out.println("Alumno/a dado de baja correctamente");
         } else {
             System.out.println("Operación cancelada");
         }
     }
+
 }
